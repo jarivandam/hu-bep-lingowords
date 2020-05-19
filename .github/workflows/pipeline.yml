@@ -58,5 +58,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
           DISTRIBUTION_ID : github
           DISTRIBUTION_NAME : Lingowords
-          DISTRIBUTION-URL : https://maven.pkg.github.com/${{github.repository}}
+          DISTRIBUTION_URL : https://maven.pkg.github.com/${{github.repository}}
 
