@@ -1,4 +1,4 @@
-#Lingowords
+# Lingowords
 ## Build status
-![](https://github.com/jakah/hu-bep-lingowords/workflows/.github/workflows/build_only.yml/badge.svg)
+![Github build only](https://github.com/jakah/hu-bep-lingowords/workflows/Build%20only/badge.svg)
 
