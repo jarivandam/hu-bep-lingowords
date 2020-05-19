@@ -1,10 +1,9 @@
-name: Build pipeline
+name: Build and deploy
 
 on:
   push:
-    branches: [development]
-  pull_request:
-      branches: [development]
+      branches:
+        - master
 
 jobs:
   build:
