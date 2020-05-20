@@ -1,12 +1,6 @@
 package com.jarivandam.lingowords.application;
 
-import com.jarivandam.lingowords.domain.Rules;
-import com.jarivandam.lingowords.domain.Word;
-import com.jarivandam.lingowords.domain.WordSource;
-import com.jarivandam.lingowords.domain.WordTarget;
-import com.jarivandam.lingowords.infrastructure.source.FileWordSource;
-import com.jarivandam.lingowords.infrastructure.target.PrintToScreenWordTarget;
-import org.dom4j.rule.Rule;
+import com.jarivandam.lingowords.domain.*;
 
 import java.io.IOException;
 
