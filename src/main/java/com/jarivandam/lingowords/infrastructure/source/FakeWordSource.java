@@ -13,10 +13,6 @@ public class FakeWordSource implements WordSource {
     public void AddWordToList(String string){
         this.wordList.add(new Word(string));
     }
-    @Override
-    public Word ReadWord() {
-        return new Word("test");
-    }
 
     @Override
     public List<Word> ReadWords() {

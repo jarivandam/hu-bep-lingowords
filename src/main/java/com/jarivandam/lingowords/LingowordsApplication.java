@@ -12,11 +12,9 @@ import java.io.IOException;
 public class LingowordsApplication {
 
     public static void main(String[] args) throws IOException {
-        System.out.print("Hello world!");
 //        System.out.print(args[0]);
         WordProcessor app= new WordProcessor(new FileWordSource("resources/baiswoorden-gekeurd.txt"),new PrintToScreenWordTarget(),new RulesNederlands(7));
         app.run();
-        //SpringApplication.run(LingowordsApplication.class, args);
     }
 
 }

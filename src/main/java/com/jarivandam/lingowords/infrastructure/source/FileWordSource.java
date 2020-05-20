@@ -14,12 +14,8 @@ public class FileWordSource implements WordSource {
     private List<String> wordStrings = Files.readAllLines(Path.of(fileName));
 
     public FileWordSource(String fileName) throws IOException {
-        fileName = fileName;
-    }
-
-    @Override
-    public Word ReadWord() {
-        return null;
+        this.fileName = fileName;
+        this.wordStrings = Files.readAllLines(Path.of(this.fileName));
     }
 
     @Override
