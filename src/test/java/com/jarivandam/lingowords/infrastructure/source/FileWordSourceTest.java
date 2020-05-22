@@ -5,6 +5,7 @@ import com.jarivandam.lingowords.domain.WordSource;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -16,7 +17,7 @@ public class FileWordSourceTest {
     @Test
     @DisplayName("")
     public void ReadWordsFromSmallFile() throws IOException {
-        WordSource source = new FileWordSource("src/test/resources/test-words.txt");
+        WordSource source = new FileWordSource(new File("src/test/resources/test-words.txt"));
         ArrayList<Word> correctWordsList = new ArrayList<Word>();
         correctWordsList.add(new Word("aapje"));
         correctWordsList.add(new Word("noot"));

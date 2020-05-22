@@ -11,7 +11,7 @@ public class Word {
     private int id;
     private String word;
 
-    public Word() {
+    protected Word() {
     }
 
     public Word(String word) {
@@ -21,11 +21,4 @@ public class Word {
     public String getWord() {
         return word;
     }
-
-//    @Override
-//    public boolean equals(Object obj) {
-//        if (obj == this) return true;
-//        if (obj == null || obj.getClass() != this.getClass()) return false;
-//        return (this.word == ((Word) obj).word);
-//    }
 }

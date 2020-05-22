@@ -3,19 +3,21 @@ package com.jarivandam.lingowords.infrastructure.source;
 import com.jarivandam.lingowords.domain.Word;
 import com.jarivandam.lingowords.domain.WordSource;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileWordSource implements WordSource {
-    private String fileName  = "src/main/resources/basiswoorden-gekeurd.txt";
-    private List<String> wordStrings = Files.readAllLines(Path.of(fileName));
+    private File file  = new File("src/main/resources/basiswoorden-gekeurd.txt");
+    private List<String> wordStrings = new ArrayList<String>();
 
-    public FileWordSource(String fileName) throws IOException {
-        this.fileName = fileName;
-        this.wordStrings = Files.readAllLines(Path.of(this.fileName));
+    public FileWordSource(File file) throws IOException {
+        this.file = file;
+        this.wordStrings = Files.readAllLines(Paths.get(file.getPath()));
     }
 
     @Override
