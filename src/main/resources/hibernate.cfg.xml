@@ -50,7 +50,7 @@
 
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
 
-        <mapping class="com.jarivandam.lingowords.domain.Word" />
+        <mapping class="nl.jarivandam.lingowords.domain.Word" />
 
     </session-factory>
 
