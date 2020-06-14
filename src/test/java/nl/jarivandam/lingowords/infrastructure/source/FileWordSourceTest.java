@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("FileWordSourceTest")
 public class FileWordSourceTest {
     @Test
-    @DisplayName("")
+    @DisplayName("Read from test file")
     public void ReadWordsFromSmallFile() throws IOException {
         WordSource source = new FileWordSource(new File("src/test/resources/test-words.txt"));
         ArrayList<Word> correctWordsList = new ArrayList<Word>();
