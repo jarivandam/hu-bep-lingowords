@@ -8,9 +8,9 @@
         <version>2.2.7.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.jarivandam</groupId>
+    <groupId>nl.jarivandam</groupId>
     <artifactId>lingowords</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>lingowords</name>
     <description>LingoWords for BEP</description>
 
