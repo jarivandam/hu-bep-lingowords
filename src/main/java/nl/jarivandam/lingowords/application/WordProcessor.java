@@ -1,6 +1,5 @@
 package nl.jarivandam.lingowords.application;
 
-import nl.jarivandam.lingowords.domain.*;
 import nl.jarivandam.lingowords.domain.Rules;
 import nl.jarivandam.lingowords.domain.Word;
 import nl.jarivandam.lingowords.domain.WordSource;

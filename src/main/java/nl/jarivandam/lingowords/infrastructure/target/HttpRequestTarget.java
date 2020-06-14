@@ -9,24 +9,27 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.HashMap;
 
 
 
 public class HttpRequestTarget implements WordTarget {
-    @Override
-    public void saveWord(Word word) {
-        String urlString = "http://localhost:8080/words";
+    private String urlString;
+    private HttpClient httpClient;
 
+    public HttpRequestTarget(String url,HttpClient httpClient){
+        this.urlString = url;
+        this.httpClient = httpClient;
+    }
+    @Override
+    public void saveWord(Word word)  {
         URI uri = null;
         try {
-            uri = new URI(urlString);
+            uri = new URI(this.urlString);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
         String jsonOutput = "{ \"word\" : \"" + word.getWord() +"\"}";
 
-        HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest
                 .newBuilder()
                 .uri(uri)
@@ -35,12 +38,13 @@ public class HttpRequestTarget implements WordTarget {
                 .build();
         HttpResponse<String> response = null;
         try {
-            response = client.send(request,HttpResponse.BodyHandlers.ofString());
+            response = this.httpClient.send(request,HttpResponse.BodyHandlers.ofString());
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         if (response.statusCode() != 200) {
             System.out.println(response.body());
         }
