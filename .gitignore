@@ -1,4 +1,5 @@
 ## Copied from https://www.dedunu.info/2014/11/gitignore-file-for-java.html
+!source/
 ##############################
 ## Java
 ##############################
@@ -13,7 +14,6 @@ hs_err_pid*
 ##############################
 ## Maven
 ##############################
-target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -38,7 +38,6 @@ gradle-app.setting
 ##############################
 ## IntelliJ
 ##############################
-out/
 .idea/
 .idea_modules/
 *.iml
